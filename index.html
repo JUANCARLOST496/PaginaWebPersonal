@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Carlos Tinoco - Página Personal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos básicos para la visibilidad de las secciones */
+        .section {
+            display: none;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="#home" onclick="showSection('home')" class="active">Inicio</a>
+            <a href="#sobre-mi" onclick="showSection('sobre-mi')">Sobre mí</a>
+            <a href="#habilidades" onclick="showSection('habilidades')">Habilidades</a>
+            <a href="#experiencia" onclick="showSection('experiencia')">Experiencia</a>
+            <a href="#contacto" onclick="showSection('contacto')">Contacto</a>
+        </div>
+        <div class="hero">
+            <div class="profile-image">
+                <img src="images/fotografia.jpg" alt="Juan Carlos Tinoco" class="img-profile">
+            </div>
+            <h1>Juan Carlos Tinoco</h1>
+            <p>Ingeniero de Software | Estudiante Máster en Ingeniería Web</p>
+            <a href="sobre-mi.html" class="btn-primary">Perfil</a>
+        </div>
+    </header>
+
+    <!-- Inicio -->
+    <div id="home" class="section">
+        <h2>Bienvenido a la página de Juan Carlos Tinoco</h2>
+        <p>Aquí puedes encontrar información sobre mi perfil profesional, habilidades, experiencia y datos de contacto.</p>
+    </div>
+
+    <!-- Sobre mí -->
+    <div id="sobre-mi" class="section">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Soy Juan Carlos Tinoco, Ingeniero de Software y actualmente estudiante de un Máster en Ingeniería Web.</p>
+    </div>
+
+    <!-- Habilidades -->
+    <div id="habilidades" class="section">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <div class="skill-card">
+                <h3>Lenguajes de Programación</h3>
+                <ul>
+                    <li>Java (Maven, Gradle)</li>
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>Laravel</li>
+                    <li>Spring Boot</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Herramientas QA</h3>
+                <ul>
+                    <li>Selenium</li>
+                    <li>Maven</li>
+                    <li>Cucumber</li>
+                    <li>Gherkin</li>
+                    <li>Serenity</li>
+                    <li>Postman</li>
+                    <li>ScreenPlay</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Otras Herramientas</h3>
+                <ul>
+                    <li>Docker</li>
+                    <li>GIT</li>
+                    <li>Jira</li>
+                    <li>Bitbucket</li>
+                    <li>Confluence</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiencia -->
+    <div id="experiencia" class="section">
+        <h2>Experiencia Laboral</h2>
+        <div class="experience">
+            <div class="experience-item">
+                <h3>Softtek - Tester y Automatización QA</h3>
+                <p>Julio 2022 - Marzo 2024 | Colombia</p>
+                <p>Fui asignado al cliente Generali Global Assistance, donde asumí diversas responsabilidades en el ámbito de Aseguramiento de la Calidad (QA) y automatización. Durante esta experiencia:</p>
+                <ul>
+                    <li><strong>Creación de Casos de Prueba:</strong> Desarrollé casos de prueba detallados, basados en requisitos funcionales y no funcionales del software.</li>
+                    <li><strong>Automatización QA:</strong> Desarrollé scripts de automatización utilizando herramientas como Selenium, Cucumber, Maven y Java para garantizar la calidad de las aplicaciones mediante pruebas automatizadas robustas para aplicaciones web.</li>
+                    <li><strong>Pruebas API:</strong> Competente en pruebas de API utilizando Postman, diseñando, ejecutando y automatizando conjuntos de pruebas para API REST.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacto -->
+    <div id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>Puedes ponerte en contacto conmigo a través de los siguientes medios:</p>
+        <ul>
+            <li><strong>Teléfono:</strong> +34 678665958</li>
+            <li><strong>Email:</strong> juancarlost496@gmail.com</li>
+        </ul>
+    </div>
+
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>

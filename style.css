@@ -1,0 +1,44 @@
+ /* Estilos para la barra de navegación */
+ .navbar {
+    background-color: #333;  /* Fondo oscuro */
+    padding: 10px 20px;       /* Padding reducido */
+    font-size: 14px;          /* Tamaño de fuente más pequeño */
+    text-align: center;       /* Centrado de los enlaces */
+}
+
+.navbar a {
+    color: white;             /* Enlaces blancos */
+    text-decoration: none;    /* Sin subrayado */
+    padding: 8px 16px;        /* Espaciado más pequeño */
+    margin: 0 10px;           /* Separación entre los enlaces */
+    border-radius: 4px;       /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+/* Cambiar el color del enlace al pasar el ratón */
+.navbar a:hover {
+    background-color: #555;  /* Color de fondo más claro al pasar el ratón */
+}
+
+/* Enlace activo con fondo más destacado */
+.navbar a.active {
+    font-weight: bold;        /* Negrita */
+    background-color: #444;  /* Fondo más oscuro */
+}
+
+/* Estilos básicos para la visibilidad de las secciones */
+.section {
+    display: none;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.img-profile {
+    width: 150px;   
+    height: 150px;  /* Asegúrate de que el alto sea igual al ancho */
+    object-fit: cover; /* Esto mantiene la proporción de la imagen y la ajusta al tamaño */
+    /* Eliminar border-radius para que la imagen sea cuadrada */
+}
