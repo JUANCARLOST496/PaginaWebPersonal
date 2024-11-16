@@ -26,6 +26,7 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+
 </head>
 <body>
 
@@ -36,6 +37,7 @@
             <a href="#habilidades" onclick="showSection('habilidades')">Habilidades</a>
             <a href="#experiencia" onclick="showSection('experiencia')">Experiencia</a>
             <a href="#contacto" onclick="showSection('contacto')">Contacto</a>
+            <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()">
         </div>
         <div class="hero">
             <div class="profile-image">
@@ -43,15 +45,10 @@
             </div>
             <h1>Juan Carlos Tinoco</h1>
             <p>Ingeniero de Software | Estudiante Máster en Ingeniería Web</p>
-            <a href="sobre-mi.html" class="btn-primary">Perfil</a>
         </div>
     </header>
 
-    <!-- Inicio -->
-    <div id="home" class="section">
-        <h2>Bienvenido a la página de Juan Carlos Tinoco</h2>
-        <p>Aquí puedes encontrar información sobre mi perfil profesional, habilidades, experiencia y datos de contacto.</p>
-    </div>
+ 
 
     <!-- Sobre mí -->
     <div id="sobre-mi" class="section">
@@ -123,10 +120,9 @@
     <!-- Contacto -->
     <div id="contacto" class="section">
         <h2>Contacto</h2>
-        <p>Puedes ponerte en contacto conmigo a través de los siguientes medios:</p>
         <ul>
-            <li><strong>Teléfono:</strong> +34 678665958</li>
-            <li><strong>Email:</strong> juancarlost496@gmail.com</li>
+            <li><strong>Teléfono:</strong> <a href="tel:+34678665958">+34 678665958</a></li>
+            <li><strong>Email:</strong> <a href="mailto:juancarlost496@gmail.com">juancarlost496@gmail.com</a></li>
         </ul>
     </div>
 

@@ -1,8 +1,16 @@
- /* Estilos para la barra de navegación */
- .navbar {
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;  /* Tipo de fuente para el cuerpo */
+    margin: 0;                       /* Elimina el margen predeterminado */
+    padding: 0;                      /* Elimina el padding predeterminado */
+    background-color: #fafafa;       /* Color de fondo claro */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
     background-color: #333;  /* Fondo oscuro */
     padding: 10px 20px;       /* Padding reducido */
-    font-size: 14px;          /* Tamaño de fuente más pequeño */
+    font-size: 20px;          /* Tamaño de fuente más pequeño */
     text-align: center;       /* Centrado de los enlaces */
 }
 
@@ -31,14 +39,219 @@
     display: none;
 }
 
+/* Estilos para la imagen de perfil circular */
+.img-profile {
+    width: 150px;   
+    height: 150px;  /* Asegúrate de que el alto sea igual al ancho */
+    object-fit: cover; /* Esto mantiene la proporción de la imagen y la ajusta al tamaño */
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 3px solid #fff; /* Agrega un borde blanco alrededor para darle un efecto más elegante */
+    margin: 0 auto;  /* Centra la imagen dentro de su contenedor */
+}
+
+/* Estilos para el héroe (sección principal de la página) */
 .hero {
     text-align: center;
     margin-top: 30px;
 }
 
-.img-profile {
-    width: 150px;   
-    height: 150px;  /* Asegúrate de que el alto sea igual al ancho */
-    object-fit: cover; /* Esto mantiene la proporción de la imagen y la ajusta al tamaño */
-    /* Eliminar border-radius para que la imagen sea cuadrada */
+/* Estilos para las cajas de texto y organización */
+.box {
+    background-color: #f4f4f4;  /* Fondo gris claro para la caja */
+    padding: 20px;              /* Espaciado dentro de la caja */
+    border-radius: 8px;         /* Bordes redondeados */
+    margin: 10px 0;             /* Separación entre cajas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.box h2, .box p {
+    margin: 0;                   /* Eliminar márgenes por defecto */
+    padding: 5px 0;              /* Padding entre los elementos de texto */
+}
+
+.box h2 {
+    font-size: 1.5em;            /* Tamaño de fuente más grande para los títulos */
+    color: #333;                 /* Color del título */
+}
+
+.box p {
+    font-size: 1em;              /* Tamaño de fuente más pequeño para el texto */
+    color: #666;                 /* Color gris para el texto */
+}
+
+/* Estilos para las tarjetas de habilidades */
+.skills {
+    display: flex;                /* Usamos flexbox para que las tarjetas se alineen en fila */
+    flex-wrap: wrap;              /* Permite que las tarjetas se muevan a una nueva fila si es necesario */
+    gap: 20px;                    /* Espacio entre las tarjetas */
+    justify-content: center;      /* Centra las tarjetas dentro del contenedor */
+    margin-top: 20px;             /* Espacio superior */
+}
+
+.skill-card {
+    width: 300px;                 /* Ancho de cada tarjeta */
+    background-color: #fff;       /* Fondo blanco */
+    border-radius: 8px;           /* Bordes redondeados */
+    padding: 20px;                /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+    margin-bottom: 20px;          /* Espacio debajo de cada tarjeta */
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}
+
+.skill-card h3 {
+    font-size: 1.4em;             /* Tamaño de la fuente */
+    margin-bottom: 10px;          /* Espacio debajo del título */
+    color: #333;                  /* Color del título */
+}
+
+.skill-card ul {
+    list-style: none;             /* Elimina los puntos de la lista */
+    padding-left: 0;              /* Elimina el padding por defecto */
+}
+
+.skill-card ul li {
+    font-size: 1em;               /* Tamaño de la fuente */
+    color: #666;                  /* Color gris para los ítems */
+    margin-bottom: 8px;           /* Espacio entre los ítems */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .skills {
+        flex-direction: column;    /* Cambia a columna en pantallas pequeñas */
+        align-items: center;       /* Centra las tarjetas */
+    }
+
+    .skill-card {
+        width: 90%;                /* Ajusta el tamaño de las tarjetas en pantallas pequeñas */
+    }
+}
+
+/* Estilos para la sección de experiencia laboral */
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.experience-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-item ul li {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#contacto ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#contacto ul li {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#contacto a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contacto a:hover {
+    color: #004d99;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #contacto ul {
+        padding-left: 20px;
+    }
+
+    #contacto ul li {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+}
+
+.search-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Estilos para el campo de búsqueda */
+#search {
+    padding: 10px 15px;        /* Relleno dentro del campo (superior/inferior, izquierdo/derecho) */
+    width: 60%;                /* El campo ocupará el 80% del ancho disponible */
+    max-width: 300px;          /* Limita el ancho máximo a 400px */
+    border: 2px solid #ccc;    /* Borde gris claro */
+    border-radius: 25px;       /* Bordes redondeados */
+    font-size: 16px;           /* Tamaño de la fuente */
+    color: #333;               /* Color del texto (oscuro) */
+    background-color: #fff;    /* Fondo blanco */
+    box-sizing: border-box;    /* Hace que el padding no afecte al tamaño del campo */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves para el borde y la sombra */
+}
+
+/* Estilo para cuando el campo de búsqueda está enfocado */
+#search:focus {
+    outline: none;             /* Elimina el borde azul predeterminado de los navegadores */
+    border-color: #007BFF;     /* Cambia el borde a un azul suave cuando está enfocado */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Agrega una sombra azul clara alrededor del campo */
+}
+
+/* Estilo para el placeholder (texto por defecto) */
+#search::placeholder {
+    color: #aaa;               /* Color gris claro para el texto del placeholder */
+    font-style: italic;        /* Hacer que el placeholder tenga cursiva */
 }
