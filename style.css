@@ -101,10 +101,7 @@ body {
     margin-bottom: 20px;          /* Espacio debajo de cada tarjeta */
 }
 
-.skill-card:hover {
-    transform: translateY(-10px); /* Eleva la tarjeta al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
-}
+
 
 .skill-card h3 {
     font-size: 1.4em;             /* Tamaño de la fuente */
