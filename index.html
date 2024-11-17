@@ -4,44 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Carlos Tinoco - Página Personal</title>
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilos básicos para la visibilidad de las secciones */
+        .section {
+            display: none;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+    </style>
+    <!-- Hotjar Tracking Code for Pagina Web Personal -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5210389,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
 </head>
 <body>
 
     <header>
         <div class="navbar">
-            <a href="#sobre-mi" onclick="showSection('sobre-mi')">
-                <i class="fa-regular fa-user" aria-hidden="true"></i>
-                <span class="sr-only">Sobre mí</span>
-            </a>
-            <a href="#habilidades" onclick="showSection('habilidades')">
-                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
-                <span class="sr-only">Habilidades</span>
-            </a>
-            <a href="#experiencia" onclick="showSection('experiencia')">
-                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                <span class="sr-only">Experiencia</span>
-            </a>
-            <a href="#contacto" onclick="showSection('contacto')">
-                <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
-                <span class="sr-only">Contacto</span>
-            </a>
-            <input type="text" id="search" placeholder="Buscar..." aria-label="Buscar contenido en el sitio" />
+            
+            <a href="#sobre-mi" onclick="showSection('sobre-mi')"><i class="fa-regular fa-user"></i> Sobre mí</a>
+            <a href="#habilidades" onclick="showSection('habilidades')"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
+            <a href="#experiencia" onclick="showSection('experiencia')"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+            <a href="#contacto" onclick="showSection('contacto')"><i class="fa-solid fa-mobile-screen-button"></i> Contacto</a>
+            
+            <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()"> <a href="#home" onclick="showSection('home')" class="active"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <div class="hero">
             <div class="profile-image">
-                <img src="images/fotografia.jpg" alt="Retrato de Juan Carlos Tinoco" class="img-profile">
+                <img src="images/fotografia.jpg" alt="Juan Carlos Tinoco" class="img-profile">
             </div>
             <h1>Juan Carlos Tinoco</h1>
             <p>Ingeniero de Software | Estudiante Máster en Ingeniería Web</p>
         </div>
     </header>
 
+ 
+
     <!-- Sobre mí -->
     <div id="sobre-mi" class="section">
         <h2>Sobre mí</h2>
-        <p>¡Hola! Soy Juan Carlos Tinoco, Ingeniero de Software y actualmente estudiante de un Máster en Ingeniería Web. Tengo experiencia en QA, especialmente en automatización de pruebas, y conocimientos en desarrollo ágil con Scrum.</p>
+        <p>¡Hola! Soy Juan Carlos Tinoco, Ingeniero de Software y actualmente estudiante de un Máster en Ingeniería Web. Tengo experiencia en el ambito de QA principalmente el la automatización de pruebas. Al igual tengo conocimientos en desarrollo utilizando metodología scrum.</p>
     </div>
 
     <!-- Habilidades -->
@@ -69,7 +85,20 @@
                     <li>Selenium</li>
                     <li>Maven</li>
                     <li>Cucumber</li>
+                    <li>Gherkin</li>
+                    <li>Serenity</li>
                     <li>Postman</li>
+                    <li>ScreenPlay</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Otras Herramientas</h3>
+                <ul>
+                    <li>Docker</li>
+                    <li>GIT</li>
+                    <li>Jira</li>
+                    <li>Bitbucket</li>
+                    <li>Confluence</li>
                 </ul>
             </div>
         </div>
@@ -82,7 +111,12 @@
             <div class="experience-item">
                 <h3>Softtek - Tester y Automatización QA</h3>
                 <p>Julio 2022 - Marzo 2024 | Colombia</p>
-                <p>Desarrollé casos de prueba, scripts de automatización y pruebas de API utilizando herramientas como Selenium, Cucumber y Postman.</p>
+                <p>Fui asignado al cliente Generali Global Assistance, donde asumí diversas responsabilidades en el ámbito de Aseguramiento de la Calidad (QA) y automatización. Durante esta experiencia:</p>
+                <ul>
+                    <li><strong>Creación de Casos de Prueba:</strong> Desarrollé casos de prueba detallados, basados en requisitos funcionales y no funcionales del software.</li>
+                    <li><strong>Automatización QA:</strong> Desarrollé scripts de automatización utilizando herramientas como Selenium, Cucumber, Maven y Java para garantizar la calidad de las aplicaciones mediante pruebas automatizadas robustas para aplicaciones web.</li>
+                    <li><strong>Pruebas API:</strong> Competente en pruebas de API utilizando Postman, diseñando, ejecutando y automatizando conjuntos de pruebas para API REST.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -96,10 +130,10 @@
         </ul>
     </div>
 
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-
-</body>
-</html>
-
 
  
