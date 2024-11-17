@@ -1,12 +1,4 @@
-/* Estilos generales para el cuerpo de la página */
-body {
-    font-family: Arial, sans-serif;  /* Tipo de fuente para el cuerpo */
-    margin: 0;                       /* Elimina el margen predeterminado */
-    padding: 0;                      /* Elimina el padding predeterminado */
-    background-color: #fafafa;       /* Color de fondo claro */
-}
-
-
+/* Estilo para texto solo visible para lectores de pantalla */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -18,148 +10,101 @@ body {
     border: 0;
 }
 
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
 
-/* Estilos para la barra de navegación */
 .navbar {
-    background-color: #333;  /* Fondo oscuro */
-    padding: 10px 20px;       /* Padding reducido */
-    font-size: 20px;          /* Tamaño de fuente más pequeño */
-    text-align: center;       /* Centrado de los enlaces */
-    display: flex;            /* Usamos flexbox */
-    justify-content: center;  /* Centrar los enlaces */
-    flex-wrap: wrap;          /* Permite que los enlaces se envuelvan en pantallas pequeñas */
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Estilos de los enlaces en la barra de navegación */
 .navbar a {
-    color: white;             /* Enlaces blancos */
-    text-decoration: none;    /* Sin subrayado */
-    padding: 8px 16px;        /* Espaciado más pequeño */
-    margin: 0 10px;           /* Separación entre los enlaces */
-    border-radius: 4px;       /* Bordes redondeados */
-    transition: background-color 0.3s; /* Transición suave para el hover */
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 16px;
 }
 
-/* Cambiar el color del enlace al pasar el ratón */
 .navbar a:hover {
-    background-color: #555;  /* Color de fondo más claro al pasar el ratón */
+    background-color: #555;
 }
 
-/* Enlace activo con fondo más destacado */
-.navbar a.active {
-    font-weight: bold;        /* Negrita */
-    background-color: #444;  /* Fondo más oscuro */
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;  /* Cambia la dirección de los enlaces a columna en pantallas pequeñas */
-        align-items: center;     /* Centra los enlaces */
-    }
-
-    .navbar a {
-        margin: 10px 0;           /* Separación vertical entre los enlaces */
-    }
-}
-
-/* Estilos básicos para la visibilidad de las secciones */
-.section {
-    padding: 20px;                /* Añadimos padding para separar los textos de los bordes */
-    margin: 20px auto;            /* Añadimos margen para separar las secciones entre sí */
-    max-width: 1200px;            /* Limitar el ancho máximo para mantener todo alineado */
-    box-sizing: border-box;       /* Asegura que el padding no afecte al tamaño total */
-}
-
-/* Estilos para la imagen de perfil circular */
-.img-profile {
-    width: 150px;   
-    height: 150px;  /* Asegúrate de que el alto sea igual al ancho */
-    object-fit: cover; /* Esto mantiene la proporción de la imagen y la ajusta al tamaño */
-    border-radius: 50%; /* Hace la imagen circular */
-    border: 3px solid #fff; /* Agrega un borde blanco alrededor para darle un efecto más elegante */
-    margin: 0 auto;  /* Centra la imagen dentro de su contenedor */
-}
-
-/* Estilos para el héroe (sección principal de la página) */
 .hero {
     text-align: center;
     margin-top: 30px;
+    padding: 20px;
 }
 
-/* Estilos para las cajas de texto y organización */
-.box {
-    background-color: #f4f4f4;  /* Fondo gris claro para la caja */
-    padding: 20px;              /* Espaciado dentro de la caja */
-    border-radius: 8px;         /* Bordes redondeados */
-    margin: 10px 0;             /* Separación entre cajas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+.img-profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin: 0 auto;
+    display: block;
 }
 
-.box h2, .box p {
-    margin: 0;                   /* Eliminar márgenes por defecto */
-    padding: 5px 0;              /* Padding entre los elementos de texto */
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.box h2 {
-    font-size: 1.5em;            /* Tamaño de fuente más grande para los títulos */
-    color: #333;                 /* Color del título */
-}
-
-.box p {
-    font-size: 1em;              /* Tamaño de fuente más pequeño para el texto */
-    color: #666;                 /* Color gris para el texto */
-}
-
-/* Estilos para las tarjetas de habilidades */
 .skills {
-    display: flex;                /* Usamos flexbox para que las tarjetas se alineen en fila */
-    flex-wrap: wrap;              /* Permite que las tarjetas se muevan a una nueva fila si es necesario */
-    gap: 20px;                    /* Espacio entre las tarjetas */
-    justify-content: center;      /* Centra las tarjetas dentro del contenedor */
-    margin-top: 20px;             /* Espacio superior */
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skill-card {
-    width: 300px;                 /* Ancho de cada tarjeta */
-    background-color: #fff;       /* Fondo blanco */
-    border-radius: 8px;           /* Bordes redondeados */
-    padding: 20px;                /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
-    margin-bottom: 20px;          /* Espacio debajo de cada tarjeta */
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .skill-card h3 {
-    font-size: 1.4em;             /* Tamaño de la fuente */
-    margin-bottom: 10px;          /* Espacio debajo del título */
-    color: #333;                  /* Color del título */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .skill-card ul {
-    list-style: none;             /* Elimina los puntos de la lista */
-    padding-left: 0;              /* Elimina el padding por defecto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .skill-card ul li {
-    font-size: 1em;               /* Tamaño de la fuente */
-    color: #666;                  /* Color gris para los ítems */
-    margin-bottom: 8px;           /* Espacio entre los ítems */
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 8px;
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
-    .skills {
-        flex-direction: column;    /* Cambia a columna en pantallas pequeñas */
-        align-items: center;       /* Centra las tarjetas */
-    }
-
-    .skill-card {
-        width: 90%;                /* Ajusta el tamaño de las tarjetas en pantallas pequeñas */
-    }
-}
-
-/* Estilos para la sección de experiencia laboral */
 .experience {
     display: flex;
     flex-direction: column;
@@ -181,125 +126,69 @@ body {
 .experience-item p {
     font-size: 1em;
     color: #666;
-}
-
-.experience-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.experience-item ul li {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-/* Estilos para la sección de contacto */
-#contacto {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #contacto ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
 #contacto ul li {
-    font-size: 1em;
-    color: #666;
     margin-bottom: 10px;
-}
-
-#contacto h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333;
 }
 
 #contacto a {
     color: #0066cc;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 #contacto a:hover {
     color: #004d99;
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
-    #contacto ul {
-        padding-left: 20px;
-    }
-
-    #contacto ul li {
-        font-size: 1em;
-        margin-bottom: 15px;
-    }
-}
-
-.search-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Estilos para el campo de búsqueda */
+/* Ajuste para campo de búsqueda */
 #search {
-    padding: 10px 15px;        /* Relleno dentro del campo (superior/inferior, izquierdo/derecho) */
-    width: 60%;                /* El campo ocupará el 80% del ancho disponible */
-    max-width: 300px;          /* Limita el ancho máximo a 400px */
-    border: 2px solid #ccc;    /* Borde gris claro */
-    border-radius: 25px;       /* Bordes redondeados */
-    font-size: 16px;           /* Tamaño de la fuente */
-    color: #333;               /* Color del texto (oscuro) */
-    background-color: #fff;    /* Fondo blanco */
-    box-sizing: border-box;    /* Hace que el padding no afecte al tamaño del campo */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves para el borde y la sombra */
+    padding: 10px 15px;
+    width: 60%;
+    max-width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Estilo para cuando el campo de búsqueda está enfocado */
 #search:focus {
-    outline: none;             /* Elimina el borde azul predeterminado de los navegadores */
-    border-color: #007BFF;     /* Cambia el borde a un azul suave cuando está enfocado */
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Agrega una sombra azul clara alrededor del campo */
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
-/* Estilo para el placeholder (texto por defecto) */
+/* Ajuste para texto placeholder */
 #search::placeholder {
-    color: #aaa;               /* Color gris claro para el texto del placeholder */
-    font-style: italic;        /* Hacer que el placeholder tenga cursiva */
+    color: #aaa;
+    font-style: italic;
 }
 
-/* Añadir espacio a los textos dentro de las secciones principales (sobre mí, experiencia, contacto) */
-#sobre-mi, #habilidades, #experiencia, #contacto {
-    padding: 30px;                /* Añadimos un padding para separar el texto de los bordes */
-    background-color: #fff;       /* Fondo blanco para las secciones */
-    border-radius: 8px;           /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para cada sección */
-    margin-bottom: 20px;          /* Separación entre las secciones */
-    margin-right: 15px;           /* Espacio a la derecha de las secciones */
-    margin-left: 30px;            /* Separación adicional a la izquierda */
+@media (max-width: 768px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 90%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
-#sobre-mi, #contacto {
-    padding: 30px;               /* Añadimos un padding para separar el texto de los bordes */
-    background-color: #fff;      /* Fondo blanco para las secciones */
-    border-radius: 8px;          /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para cada sección */
-    margin-bottom: 20px;         /* Separación entre las secciones */
-    margin-right: 15px;          /* Espacio a la derecha de las secciones */
-    margin-left: 50px;           /* Aumenta el margen a la izquierda */
-}
 
