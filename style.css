@@ -36,7 +36,10 @@ body {
 
 /* Estilos básicos para la visibilidad de las secciones */
 .section {
-    display: none;
+    padding: 20px;                /* Añadimos padding para separar los textos de los bordes */
+    margin: 20px auto;            /* Añadimos margen para separar las secciones entre sí */
+    max-width: 1200px;            /* Limitar el ancho máximo para mantener todo alineado */
+    box-sizing: border-box;       /* Asegura que el padding no afecte al tamaño total */
 }
 
 /* Estilos para la imagen de perfil circular */
@@ -254,4 +257,25 @@ body {
 #search::placeholder {
     color: #aaa;               /* Color gris claro para el texto del placeholder */
     font-style: italic;        /* Hacer que el placeholder tenga cursiva */
+}
+
+/* Añadir espacio a los textos dentro de las secciones principales (sobre mí, experiencia, contacto) */
+#sobre-mi, #habilidades, #experiencia, #contacto {
+    padding: 30px;                /* Añadimos un padding para separar el texto de los bordes */
+    background-color: #fff;       /* Fondo blanco para las secciones */
+    border-radius: 8px;           /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para cada sección */
+    margin-bottom: 20px;          /* Separación entre las secciones */
+    margin-right: 15px;           /* Espacio a la derecha de las secciones */
+    margin-left: 30px;            /* Separación adicional a la izquierda */
+}
+
+#sobre-mi, #contacto {
+    padding: 30px;               /* Añadimos un padding para separar el texto de los bordes */
+    background-color: #fff;      /* Fondo blanco para las secciones */
+    border-radius: 8px;          /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para cada sección */
+    margin-bottom: 20px;         /* Separación entre las secciones */
+    margin-right: 15px;          /* Espacio a la derecha de las secciones */
+    margin-left: 50px;           /* Aumenta el margen a la izquierda */
 }
