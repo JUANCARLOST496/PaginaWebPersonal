@@ -36,12 +36,15 @@
     <header>
         <div class="navbar">
             
-            <a href="#sobre-mi" onclick="showSection('sobre-mi')"><i class="fa-regular fa-user"></i> Sobre mí</a>
-            <a href="#habilidades" onclick="showSection('habilidades')"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
+            <a href="#sobre-mi" onclick="showSection('sobre-mi')">
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                <span class="sr-only">Sobre mí</span>
+              </a>
+            <a href="#habilidades" onclick="showSection('habilidades')" title="Ir a la sección de habilidades"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
             <a href="#experiencia" onclick="showSection('experiencia')"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
             <a href="#contacto" onclick="showSection('contacto')"><i class="fa-solid fa-mobile-screen-button"></i> Contacto</a>
             
-            <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()"> <a href="#home" onclick="showSection('home')" class="active"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()" aria-label="Buscar contenido en el sitio"> <a href="#home" onclick="showSection('home')" class="active"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <div class="hero">
             <div class="profile-image">
