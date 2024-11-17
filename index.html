@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Carlos Tinoco - Página Personal</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* Estilos básicos para la visibilidad de las secciones */
         .section {
@@ -32,12 +33,13 @@
 
     <header>
         <div class="navbar">
-            <a href="#home" onclick="showSection('home')" class="active">Inicio</a>
-            <a href="#sobre-mi" onclick="showSection('sobre-mi')">Sobre mí</a>
-            <a href="#habilidades" onclick="showSection('habilidades')">Habilidades</a>
-            <a href="#experiencia" onclick="showSection('experiencia')">Experiencia</a>
-            <a href="#contacto" onclick="showSection('contacto')">Contacto</a>
-            <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()">
+            
+            <a href="#sobre-mi" onclick="showSection('sobre-mi')"><i class="fa-regular fa-user"></i> Sobre mí</a>
+            <a href="#habilidades" onclick="showSection('habilidades')"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
+            <a href="#experiencia" onclick="showSection('experiencia')"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+            <a href="#contacto" onclick="showSection('contacto')"><i class="fa-solid fa-mobile-screen-button"></i> Contacto</a>
+            <a href="#home" onclick="showSection('home')" class="active"><input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()"> <i class="fa-solid fa-magnifying-glass"></i></a>
+            
         </div>
         <div class="hero">
             <div class="profile-image">
@@ -53,7 +55,7 @@
     <!-- Sobre mí -->
     <div id="sobre-mi" class="section">
         <h2>Sobre mí</h2>
-        <p>¡Hola! Soy Juan Carlos Tinoco, Ingeniero de Software y actualmente estudiante de un Máster en Ingeniería Web.</p>
+        <p>¡Hola! Soy Juan Carlos Tinoco, Ingeniero de Software y actualmente estudiante de un Máster en Ingeniería Web. Tengo experiencia en el ambito de QA principalmente el la automatización de pruebas. Al igual tengo conocimientos en desarrollo utilizando metodología scrum.</p>
     </div>
 
     <!-- Habilidades -->
