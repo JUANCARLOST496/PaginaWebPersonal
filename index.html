@@ -22,6 +22,14 @@
             outline: 2px solid #007BFF;
             outline-offset: 2px;
         }
+
+        /* Asegurar un buen contraste */
+        .contrast-text {
+            color: #333; /* Usar un color oscuro para mejorar el contraste */
+        }
+        .error-message {
+            color: red; /* Color de error, y se le agrega un ícono para mayor claridad */
+        }
     </style>
 </head>
 <body>
@@ -52,7 +60,7 @@
                 <img src="images/fotografia.jpg" alt="Fotografía de Juan Carlos Tinoco" class="img-profile">
             </div>
             <h1>Juan Carlos Tinoco</h1>
-            <p>Ingeniero de Software | Estudiante Máster en Ingeniería Web</p>
+            <p class="contrast-text">Ingeniero de Software | Estudiante Máster en Ingeniería Web</p>
         </div>
     </header>
 
@@ -134,9 +142,6 @@
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 Juan Carlos Tinoco. Todos los derechos reservados.</p>
-    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -150,5 +155,6 @@
     </script>
 </body>
 </html>
+
 
 
