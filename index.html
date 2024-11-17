@@ -29,13 +29,23 @@
 
     <header>
         <nav class="navbar" aria-label="Navegación principal">
-            <a href="#sobre-mi" onclick="showSection('sobre-mi')" aria-label="Sección Sobre mí"><i class="fa-regular fa-user"></i> Sobre mí</a>
-            <a href="#habilidades" onclick="showSection('habilidades')" aria-label="Sección Habilidades"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
-            <a href="#experiencia" onclick="showSection('experiencia')" aria-label="Sección Experiencia"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
-            <a href="#contacto" onclick="showSection('contacto')" aria-label="Sección Contacto"><i class="fa-solid fa-mobile-screen-button"></i> Contacto</a>
+            <a href="#sobre-mi" onclick="showSection('sobre-mi')" aria-label="Ir a la sección Sobre mí">
+                <i class="fa-regular fa-user"></i> Sobre mí
+            </a>
+            <a href="#habilidades" onclick="showSection('habilidades')" aria-label="Ir a la sección Habilidades">
+                <i class="fa-solid fa-laptop-code"></i> Habilidades
+            </a>
+            <a href="#experiencia" onclick="showSection('experiencia')" aria-label="Ir a la sección Experiencia">
+                <i class="fa-solid fa-briefcase"></i> Experiencia
+            </a>
+            <a href="#contacto" onclick="showSection('contacto')" aria-label="Ir a la sección Contacto">
+                <i class="fa-solid fa-mobile-screen-button"></i> Contacto
+            </a>
             <label for="search" class="sr-only">Buscar:</label>
             <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()">
-            <a href="#home" onclick="showSection('home')" class="active" aria-label="Ir a la página principal"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#home" onclick="showSection('home')" class="active" aria-label="Ir a la página principal">
+                <i class="fa-solid fa-magnifying-glass"></i> Buscar
+            </a>
         </nav>
         <div class="hero">
             <div class="profile-image">
