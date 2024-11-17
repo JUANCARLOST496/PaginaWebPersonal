@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página personal de Juan Carlos Tinoco, Ingeniero de Software y estudiante de Máster en Ingeniería Web.">
     <title>Juan Carlos Tinoco - Página Personal</title>
     <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
@@ -17,148 +16,124 @@
         .navbar a.active {
             font-weight: bold;
         }
-
-        .focus-visible {
-            outline: 2px solid #007BFF;
-            outline-offset: 2px;
-        }
-
-        /* Asegurar un buen contraste */
-        .contrast-text {
-            color: #333; /* Usar un color oscuro para mejorar el contraste */
-        }
-        .error-message {
-            color: red; /* Color de error, y se le agrega un ícono para mayor claridad */
-        }
     </style>
+    <!-- Hotjar Tracking Code for Pagina Web Personal -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5210389,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
 </head>
 <body>
-    <a href="#contenido" class="sr-only">Saltar al contenido principal</a>
 
     <header>
-        <nav class="navbar" aria-label="Navegación principal">
-            <a href="#sobre-mi" onclick="showSection('sobre-mi')" aria-label="Ir a la sección Sobre mí">
-                <i class="fa-regular fa-user"></i> Sobre mí
-            </a>
-            <a href="#habilidades" onclick="showSection('habilidades')" aria-label="Ir a la sección Habilidades">
-                <i class="fa-solid fa-laptop-code"></i> Habilidades
-            </a>
-            <a href="#experiencia" onclick="showSection('experiencia')" aria-label="Ir a la sección Experiencia">
-                <i class="fa-solid fa-briefcase"></i> Experiencia
-            </a>
-            <a href="#contacto" onclick="showSection('contacto')" aria-label="Ir a la sección Contacto">
-                <i class="fa-solid fa-mobile-screen-button"></i> Contacto
-            </a>
-            <label for="search" class="sr-only">Buscar:</label>
-            <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()">
-            <a href="#home" onclick="showSection('home')" class="active" aria-label="Ir a la página principal">
-                <i class="fa-solid fa-magnifying-glass"></i> Buscar
-            </a>
-        </nav>
+        <div class="navbar">
+            
+            <a href="#sobre-mi" onclick="showSection('sobre-mi')"><i class="fa-regular fa-user"></i> Sobre mí</a>
+            <a href="#habilidades" onclick="showSection('habilidades')"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
+            <a href="#experiencia" onclick="showSection('experiencia')"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+            <a href="#contacto" onclick="showSection('contacto')"><i class="fa-solid fa-mobile-screen-button"></i> Contacto</a>
+            
+            <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()"> <a href="#home" onclick="showSection('home')" class="active"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
         <div class="hero">
             <div class="profile-image">
-                <img src="images/fotografia.jpg" alt="Fotografía de Juan Carlos Tinoco" class="img-profile">
+                <img src="images/fotografia.jpg" alt="Juan Carlos Tinoco" class="img-profile">
             </div>
             <h1>Juan Carlos Tinoco</h1>
-            <p class="contrast-text">Ingeniero de Software | Estudiante Máster en Ingeniería Web</p>
+            <p>Ingeniero de Software | Estudiante Máster en Ingeniería Web</p>
         </div>
     </header>
 
-    <main id="contenido">
-        <!-- Sobre mí -->
-        <section id="sobre-mi" class="section" aria-labelledby="titulo-sobre-mi">
-            <h2 id="titulo-sobre-mi">Sobre mí</h2>
-            <p>¡Hola! Soy Juan Carlos Tinoco, Ingeniero de Software y actualmente estudiante de un Máster en Ingeniería Web. Tengo experiencia en el ámbito de QA principalmente en la automatización de pruebas. También tengo conocimientos en desarrollo utilizando metodología Scrum.</p>
-        </section>
+ 
 
-        <!-- Habilidades -->
-        <section id="habilidades" class="section" aria-labelledby="titulo-habilidades">
-            <h2 id="titulo-habilidades">Habilidades</h2>
-            <div class="skills">
-                <div class="skill-card">
-                    <h3>Lenguajes de Programación</h3>
-                    <ul>
-                        <li>Java (Maven, Gradle)</li>
-                        <li>PHP</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Frameworks</h3>
-                    <ul>
-                        <li>Laravel</li>
-                        <li>Spring Boot</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Herramientas QA</h3>
-                    <ul>
-                        <li>Selenium</li>
-                        <li>Maven</li>
-                        <li>Cucumber</li>
-                        <li>Gherkin</li>
-                        <li>Serenity</li>
-                        <li>Postman</li>
-                        <li>ScreenPlay</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Otras Herramientas</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>GIT</li>
-                        <li>Jira</li>
-                        <li>Bitbucket</li>
-                        <li>Confluence</li>
-                    </ul>
-                </div>
+    <!-- Sobre mí -->
+    <div id="sobre-mi" class="section">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Soy Juan Carlos Tinoco, Ingeniero de Software y actualmente estudiante de un Máster en Ingeniería Web. Tengo experiencia en el ambito de QA principalmente el la automatización de pruebas. Al igual tengo conocimientos en desarrollo utilizando metodología scrum.</p>
+    </div>
+
+    <!-- Habilidades -->
+    <div id="habilidades" class="section">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <div class="skill-card">
+                <h3>Lenguajes de Programación</h3>
+                <ul>
+                    <li>Java (Maven, Gradle)</li>
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Experiencia -->
-        <section id="experiencia" class="section" aria-labelledby="titulo-experiencia">
-            <h2 id="titulo-experiencia">Experiencia Laboral</h2>
-            <div class="experience">
-                <div class="experience-item">
-                    <h3>Softtek - Tester y Automatización QA</h3>
-                    <p><time datetime="2022-07">Julio 2022</time> - <time datetime="2024-03">Marzo 2024</time> | Colombia</p>
-                    <p>Fui asignado al cliente Generali Global Assistance, donde asumí diversas responsabilidades en el ámbito de Aseguramiento de la Calidad (QA) y automatización. Durante esta experiencia:</p>
-                    <ul>
-                        <li><strong>Creación de Casos de Prueba:</strong> Desarrollé casos de prueba detallados, basados en requisitos funcionales y no funcionales del software.</li>
-                        <li><strong>Automatización QA:</strong> Desarrollé scripts de automatización utilizando herramientas como Selenium, Cucumber, Maven y Java para garantizar la calidad de las aplicaciones mediante pruebas automatizadas robustas para aplicaciones web.</li>
-                        <li><strong>Pruebas API:</strong> Competente en pruebas de API utilizando Postman, diseñando, ejecutando y automatizando conjuntos de pruebas para API REST.</li>
-                    </ul>
-                </div>
+            <div class="skill-card">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>Laravel</li>
+                    <li>Spring Boot</li>
+                </ul>
             </div>
-        </section>
+            <div class="skill-card">
+                <h3>Herramientas QA</h3>
+                <ul>
+                    <li>Selenium</li>
+                    <li>Maven</li>
+                    <li>Cucumber</li>
+                    <li>Gherkin</li>
+                    <li>Serenity</li>
+                    <li>Postman</li>
+                    <li>ScreenPlay</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Otras Herramientas</h3>
+                <ul>
+                    <li>Docker</li>
+                    <li>GIT</li>
+                    <li>Jira</li>
+                    <li>Bitbucket</li>
+                    <li>Confluence</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <!-- Contacto -->
-        <section id="contacto" class="section" aria-labelledby="titulo-contacto">
-            <h2 id="titulo-contacto">Contacto</h2>
-            <ul>
-                <li><strong>Teléfono:</strong> <a href="tel:+34678665958" aria-label="Llamar al número +34 678665958">+34 678665958</a></li>
-                <li><strong>Email:</strong> <a href="mailto:juancarlost496@gmail.com" aria-label="Enviar un correo a juancarlost496@gmail.com">juancarlost496@gmail.com</a></li>
-            </ul>
-        </section>
-    </main>
+    <!-- Experiencia -->
+    <div id="experiencia" class="section">
+        <h2>Experiencia Laboral</h2>
+        <div class="experience">
+            <div class="experience-item">
+                <h3>Softtek - Tester y Automatización QA</h3>
+                <p>Julio 2022 - Marzo 2024 | Colombia</p>
+                <p>Fui asignado al cliente Generali Global Assistance, donde asumí diversas responsabilidades en el ámbito de Aseguramiento de la Calidad (QA) y automatización. Durante esta experiencia:</p>
+                <ul>
+                    <li><strong>Creación de Casos de Prueba:</strong> Desarrollé casos de prueba detallados, basados en requisitos funcionales y no funcionales del software.</li>
+                    <li><strong>Automatización QA:</strong> Desarrollé scripts de automatización utilizando herramientas como Selenium, Cucumber, Maven y Java para garantizar la calidad de las aplicaciones mediante pruebas automatizadas robustas para aplicaciones web.</li>
+                    <li><strong>Pruebas API:</strong> Competente en pruebas de API utilizando Postman, diseñando, ejecutando y automatizando conjuntos de pruebas para API REST.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>© 2024 Juan Carlos Tinoco. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Contacto -->
+    <div id="contacto" class="section">
+        <h2>Contacto</h2>
+        <ul>
+            <li><strong>Teléfono:</strong> <a href="tel:+34678665958">+34 678665958</a></li>
+            <li><strong>Email:</strong> <a href="mailto:juancarlost496@gmail.com">juancarlost496@gmail.com</a></li>
+        </ul>
+    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('.navbar a');
-
-            links.forEach(link => {
-                link.addEventListener('focus', () => link.classList.add('focus-visible'));
-                link.addEventListener('blur', () => link.classList.remove('focus-visible'));
-            });
-        });
-    </script>
-</body>
-</html>
+   
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 
-
+ 
