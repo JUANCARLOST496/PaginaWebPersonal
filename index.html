@@ -29,13 +29,13 @@
 
     <header>
         <nav class="navbar" aria-label="Navegación principal">
-            <a href="#sobre-mi" onclick="showSection('sobre-mi')"><i class="fa-regular fa-user"></i> Sobre mí</a>
-            <a href="#habilidades" onclick="showSection('habilidades')"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
-            <a href="#experiencia" onclick="showSection('experiencia')"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
-            <a href="#contacto" onclick="showSection('contacto')"><i class="fa-solid fa-mobile-screen-button"></i> Contacto</a>
+            <a href="#sobre-mi" onclick="showSection('sobre-mi')" title="Ir a la sección Sobre mí"><i class="fa-regular fa-user"></i> Sobre mí</a>
+            <a href="#habilidades" onclick="showSection('habilidades')" title="Ir a la sección Habilidades"><i class="fa-solid fa-laptop-code"></i> Habilidades</a>
+            <a href="#experiencia" onclick="showSection('experiencia')" title="Ir a la sección Experiencia"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+            <a href="#contacto" onclick="showSection('contacto')" title="Ir a la sección Contacto"><i class="fa-solid fa-mobile-screen-button"></i> Contacto</a>
             <label for="search" class="sr-only">Buscar:</label>
             <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()">
-            <a href="#home" onclick="showSection('home')" class="active"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#home" onclick="showSection('home')" class="active" title="Ir a la página principal"><i class="fa-solid fa-magnifying-glass"></i></a>
         </nav>
         <div class="hero">
             <div class="profile-image">
@@ -118,16 +118,13 @@
         <section id="contacto" class="section" aria-labelledby="titulo-contacto">
             <h2 id="titulo-contacto">Contacto</h2>
             <ul>
-                <li><strong>Teléfono:</strong> <a href="tel:+34678665958">+34 678665958</a></li>
-                <li><strong>Email:</strong> <a href="mailto:juancarlost496@gmail.com">juancarlost496@gmail.com</a></li>
+                <li><strong>Teléfono:</strong> <a href="tel:+34678665958" title="Llamar a +34 678665958">+34 678665958</a></li>
+                <li><strong>Email:</strong> <a href="mailto:juancarlost496@gmail.com" title="Enviar un correo a juancarlost496@gmail.com">juancarlost496@gmail.com</a></li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 Juan Carlos Tinoco. Todos los derechos reservados.</p>
-    </footer>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const links = document.querySelectorAll('.navbar a');
@@ -140,3 +137,4 @@
     </script>
 </body>
 </html>
+
