@@ -12,8 +12,12 @@ body {
     padding: 10px 20px;       /* Padding reducido */
     font-size: 20px;          /* Tamaño de fuente más pequeño */
     text-align: center;       /* Centrado de los enlaces */
+    display: flex;            /* Usamos flexbox */
+    justify-content: center;  /* Centrar los enlaces */
+    flex-wrap: wrap;          /* Permite que los enlaces se envuelvan en pantallas pequeñas */
 }
 
+/* Estilos de los enlaces en la barra de navegación */
 .navbar a {
     color: white;             /* Enlaces blancos */
     text-decoration: none;    /* Sin subrayado */
@@ -32,6 +36,18 @@ body {
 .navbar a.active {
     font-weight: bold;        /* Negrita */
     background-color: #444;  /* Fondo más oscuro */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  /* Cambia la dirección de los enlaces a columna en pantallas pequeñas */
+        align-items: center;     /* Centra los enlaces */
+    }
+
+    .navbar a {
+        margin: 10px 0;           /* Separación vertical entre los enlaces */
+    }
 }
 
 /* Estilos básicos para la visibilidad de las secciones */
@@ -100,8 +116,6 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
     margin-bottom: 20px;          /* Espacio debajo de cada tarjeta */
 }
-
-
 
 .skill-card h3 {
     font-size: 1.4em;             /* Tamaño de la fuente */
@@ -228,7 +242,6 @@ body {
     justify-content: space-between;
 }
 
-
 /* Estilos para el campo de búsqueda */
 #search {
     padding: 10px 15px;        /* Relleno dentro del campo (superior/inferior, izquierdo/derecho) */
@@ -276,3 +289,4 @@ body {
     margin-right: 15px;          /* Espacio a la derecha de las secciones */
     margin-left: 50px;           /* Aumenta el margen a la izquierda */
 }
+
