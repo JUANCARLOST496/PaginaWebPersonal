@@ -27,6 +27,7 @@
         .contrast-text {
             color: #333; /* Usar un color oscuro para mejorar el contraste */
         }
+
         .error-message {
             color: red; /* Color de error, y se le agrega un ícono para mayor claridad */
         }
@@ -38,21 +39,21 @@
     <header>
         <nav class="navbar" aria-label="Navegación principal">
             <a href="#sobre-mi" onclick="showSection('sobre-mi')" aria-label="Ir a la sección Sobre mí">
-                <i class="fa-regular fa-user"></i> Sobre mí
+                <span class="fa-regular fa-user" aria-hidden="true"></span> Sobre mí
             </a>
             <a href="#habilidades" onclick="showSection('habilidades')" aria-label="Ir a la sección Habilidades">
-                <i class="fa-solid fa-laptop-code"></i> Habilidades
+                <span class="fa-solid fa-laptop-code" aria-hidden="true"></span> Habilidades
             </a>
             <a href="#experiencia" onclick="showSection('experiencia')" aria-label="Ir a la sección Experiencia">
-                <i class="fa-solid fa-briefcase"></i> Experiencia
+                <span class="fa-solid fa-briefcase" aria-hidden="true"></span> Experiencia
             </a>
             <a href="#contacto" onclick="showSection('contacto')" aria-label="Ir a la sección Contacto">
-                <i class="fa-solid fa-mobile-screen-button"></i> Contacto
+                <span class="fa-solid fa-mobile-screen-button" aria-hidden="true"></span> Contacto
             </a>
             <label for="search" class="sr-only">Buscar:</label>
             <input type="text" id="search" placeholder="Buscar..." onfocus="goToHome()" oninput="goToHome()">
             <a href="#home" onclick="showSection('home')" class="active" aria-label="Ir a la página principal">
-                <i class="fa-solid fa-magnifying-glass"></i> Buscar
+                <span class="fa-solid fa-magnifying-glass" aria-hidden="true"></span> Buscar
             </a>
         </nav>
         <div class="hero">
@@ -142,9 +143,6 @@
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 Juan Carlos Tinoco. Todos los derechos reservados.</p>
-    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -158,7 +156,6 @@
     </script>
 </body>
 </html>
-
 
 
 
